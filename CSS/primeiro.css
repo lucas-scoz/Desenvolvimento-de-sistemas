@@ -1,0 +1,22 @@
+
+*{
+    font-weight: bold;
+}
+
+P{
+    color: red;
+    text-align: center;
+    
+}
+
+#corVerde{
+    color: green
+}
+
+.corRoxo{
+    color: rgb(212, 18, 212)
+}
+
+.textoFim{
+    text-align: end;
+}

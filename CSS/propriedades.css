@@ -1,0 +1,20 @@
+.container{
+    background: lightblue;
+    width: 20vw;
+    height: 20vh;
+    margin: 100px auto;
+    padding: 10px 10px 10px 10px;
+    font-family:sans-serif;
+    font-size: 12px;
+    font-weight: 1000;
+    border: 1px solid black;
+    border-bottom: 20px solid yellow;
+    border-radius: 100px;
+}
+
+.container:hover{
+    background-color: darkgreen;
+    width: 21vw;
+    height: 21vh;                               
+
+}
