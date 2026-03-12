@@ -1,0 +1,101 @@
+/* RESET BÁSICO */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
+}
+
+body{
+background:#000;
+color:white;
+}
+
+/* TOPO */
+header{
+text-align:center;
+padding:25px;
+font-size:28px;
+border-bottom:2px solid #444;
+}
+
+/* CONTAINER PRINCIPAL */
+.container{
+display:flex;
+justify-content:space-between;
+gap:15px;
+padding:20px;
+}
+
+/* LISTA DE MÚSICAS E ARTISTAS */
+.musicas, .artistas{
+flex:1;
+height:550px;
+border-radius:12px;
+padding:15px;
+overflow-y:auto;
+}
+
+/* CORES SUAVES */
+.musicas{
+background:#0b1e3a; /* azul escuro */
+border:3px solid #cc4444; /* vermelho suave */
+}
+
+.artistas{
+background:#5a0000; /* vermelho escuro */
+border:3px solid #4488cc; /* azul suave */
+}
+
+/* ITENS DA LISTA */
+.item{
+display:flex;
+align-items:center;
+gap:10px;
+padding:10px;
+margin-bottom:10px;
+background:#111;
+border-radius:8px;
+transition: background 0.3s;
+}
+
+.item:hover{
+background:#222;
+}
+
+/* IMAGENS */
+.item img{
+width:50px;
+height:50px;
+object-fit:cover;
+border-radius:6px;
+}
+
+/* INFO AO LADO DA IMAGEM */
+.item .info{
+display:flex;
+flex-direction:column;
+}
+
+/* NOMES MUSICA/ARTISTA */
+.nome-musica{
+font-weight:bold;
+color:#fff;
+}
+
+.nome-artista{
+font-size:0.9em;
+color:#ddd;
+}
+
+/* PONTE CENTRAL */
+.ponte{
+width:150px;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:15px;
+font-weight:bold;
+color:#ffcc00;
+}
