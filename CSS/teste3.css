@@ -1,0 +1,68 @@
+/* wrapper comum que contém as duas tabelas
+   o scroll no wrapper afeta as duas ao mesmo tempo */
+.scroll-wrapper {
+  height: 400px;  /* mais alto para mais itens */
+  overflow-y: auto;
+  display: flex;
+  gap: 200px;               /* espaço entre as colunas */
+  padding: 0px;           /* respirar um pouco nas laterais */
+  scroll-behavior:auto /* movimento de rolagem mais fluido */
+}
+
+.column-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+h2 {
+  text-align: center;
+  margin: 0 0 5px 0;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 1.5em;
+}
+
+/* estilos para as duas colunas verticais */
+.column {
+  flex: 1;
+  min-width: 120px;
+  /* border removed, keep plain backgrounds */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  /* background removed */
+  position: relative;  /* para z-index funcionar */
+  z-index: 10;         /* acima do retângulo vertical */
+}
+.column .item {
+  padding: 6px 8px;
+  /* pequeno degrade vertical removido para testar hover */
+  text-align: center;  /* centraliza o texto */
+  transition: background-color 0.3s ease, color 0.3s ease;  /* animação fluida */
+}
+
+/* efeito hover na linha equivalente */
+.column-container:nth-child(1) .item:hover,
+.column-container:nth-child(1) .item.hover-correspondente {
+  background-color: rgba(73, 152, 236, 0.5) !important;  /* azul para esquerda */
+  color: white;
+  opacity: 1 !important;
+}
+
+.column-container:nth-child(2) .item:hover,
+.column-container:nth-child(2) .item.hover-correspondente {
+  background-color: rgba(235, 77, 77, 0.918) !important;  /* verde para direita */
+  color: white;
+  opacity: 1 !important;
+}
+
+.column .item.hidden {
+  opacity: 0;
+  transition: opacity .2s;
+}
