@@ -1,96 +1,121 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="teste3.css">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tunify</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="teste3.css"/>
 </head>
 <body>
-    <h1>Título da Tabela</h1>
-    <!-- única tabela com duas colunas -->
-    <div class="scroll-wrapper">
-      <div class="column-container">
-        <div class="column" id="left-col">
-          <div class="item">1A</div>
-          <div class="item">2A</div>
-          <div class="item">3A</div>
-          <div class="item">4A</div>
-          <div class="item">5A</div>
-          <div class="item">6A</div>
-          <div class="item">7A</div>
-          <div class="item">8A</div>
-          <div class="item">9A</div>
-          <div class="item">10A</div>
-          <div class="item">11A</div>
-          <div class="item">12A</div>
-          <div class="item">13A</div>
-          <div class="item">14A</div>
-          <div class="item">15A</div>
-          <div class="item">16A</div>
-          <div class="item">17A</div>
-          <div class="item">18A</div>
-          <div class="item">19A</div>
-          <div class="item">20A</div>
-        </div>
+ 
+  <!-- TITLE -->
+  <header>
+    <h1>TUNIFY</h1>
+  </header>
+ 
+  <!-- MAIN -->
+  <div class="main">
+ 
+    <!-- LEFT: MÚSICAS -->
+    <div class="panel panel-left">
+      <div class="panel-header">
+        <h2>MUSIC LIST</h2>
       </div>
-      <div class="column-container">
-        <div class="column" id="right-col">
-          <div class="item">1B</div>
-          <div class="item">2B</div>
-          <div class="item">3B</div>
-          <div class="item">4B</div>
-          <div class="item">5B</div>
-          <div class="item">6B</div>
-          <div class="item">7B</div>
-          <div class="item">8B</div>
-          <div class="item">9B</div>
-          <div class="item">10B</div>
-          <div class="item">11B</div>
-          <div class="item">12B</div>
-          <div class="item">13B</div>
-          <div class="item">14B</div>
-          <div class="item">15B</div>
-          <div class="item">16B</div>
-          <div class="item">17B</div>
-          <div class="item">18B</div>
-          <div class="item">19B</div>
-          <div class="item">20B</div>
+      <div class="scroll-wrapper">
+        <div class="column-container">
+          <div class="column" id="left-col">
+            <div class="item">Blinding Lights</div>
+            <div class="item">As It Was</div>
+            <div class="item">Flowers</div>
+            <div class="item">Anti-Hero</div>
+            <div class="item">Stay</div>
+            <div class="item">Levitating</div>
+            <div class="item">Bad Habits</div>
+            <div class="item">Drivers License</div>
+            <div class="item">Shape of You</div>
+            <div class="item">Rolling in the Deep</div>
+            <div class="item">Bohemian Rhapsody</div>
+            <div class="item">Billie Jean</div>
+            <div class="item">Hotel California</div>
+            <div class="item">Imagine</div>
+            <div class="item">Wonderwall</div>
+            <div class="item">Garota de Ipanema</div>
+            <div class="item">Asa Branca</div>
+            <div class="item">Tempo Perdido</div>
+            <div class="item">Velha Infância</div>
+            <div class="item">Evidências</div>
+          </div>
         </div>
       </div>
     </div>
-
-
-<script>
-  // comportamento das colunas
-  document.querySelectorAll('.column').forEach(col => {
-    const item = col.querySelector('.item'); // primeira linha
-    const wrapper = document.querySelector('.scroll-wrapper');
-
-    wrapper.addEventListener('scroll', () => {
-      const itemTop = item.offsetTop - wrapper.offsetTop;
-      item.classList.toggle('hidden', wrapper.scrollTop >= itemTop);
+ 
+    <!-- BRIDGE -->
+    <div class="bridge">
+      <div class="bridge-line-top"></div>
+      <div class="bridge-orb">
+        <div class="bridge-ring"></div>
+        <div class="bridge-ring"></div>
+        <div class="bridge-ring"></div>
+        <span class="bridge-icon">𝄞</span>
+      </div>
+      <div class="bridge-line-bot"></div>
+    </div>
+ 
+    <!-- RIGHT: ARTISTAS -->
+    <div class="panel panel-right">
+      <div class="panel-header">
+        <h2>ARTIST LIST</h2>
+      </div>
+      <div class="scroll-wrapper">
+        <div class="column-container">
+          <div class="column" id="right-col">
+            <div class="item">The Weeknd</div>
+            <div class="item">Harry Styles</div>
+            <div class="item">Miley Cyrus</div>
+            <div class="item">Taylor Swift</div>
+            <div class="item">The Kid Laroi e Justin Bieber</div>
+            <div class="item">Dua Lipa</div>
+            <div class="item">Ed Sheeran</div>
+            <div class="item">Olivia Rodrigo</div>
+            <div class="item">Ed Sheeran</div>
+            <div class="item">Adele</div>
+            <div class="item">Queen</div>
+            <div class="item">Michael Jackson</div>
+            <div class="item">Eagles</div>
+            <div class="item">John Lennon</div>
+            <div class="item">Oasis</div>
+            <div class="item">Tom Jobim e Vinicius de Moraes</div>
+            <div class="item">Luiz Gonzaga</div>
+            <div class="item">Legião Urbana</div>
+            <div class="item">Tribalistas</div>
+            <div class="item">Chitãozinho e Xororó</div>
+          </div>
+        </div>
+      </div>
+    </div>
+ 
+  </div>
+ 
+  <script>
+    // Destacar item correspondente na outra coluna
+    const leftItems  = document.querySelectorAll('#left-col .item');
+    const rightItems = document.querySelectorAll('#right-col .item');
+ 
+    function highlight(index, on) {
+      [leftItems[index], rightItems[index]].forEach(el => {
+        if (!el) return;
+        el.classList.toggle('hover-correspondente', on);
+      });
+    }
+ 
+    [...leftItems, ...rightItems].forEach((item, i) => {
+      const index = i < leftItems.length ? i : i - leftItems.length;
+      item.addEventListener('mouseenter', () => highlight(index, true));
+      item.addEventListener('mouseleave', () => highlight(index, false));
     });
-  });
-
-  // destacar item correspondente na outra coluna
-  document.querySelectorAll('.column .item').forEach((item, index) => {
-    item.addEventListener('mouseenter', () => {
-      // destacar este e o correspondente
-      item.classList.add('hover-correspondente');
-      const otherColumn = item.closest('.column-container').nextElementSibling || item.closest('.column-container').previousElementSibling;
-      if (otherColumn) {
-        const otherItem = otherColumn.querySelectorAll('.item')[index];
-        if (otherItem) otherItem.classList.add('hover-correspondente');
-      }
-    });
-    item.addEventListener('mouseleave', () => {
-      // remover destaque de todos
-      document.querySelectorAll('.item.hover-correspondente').forEach(i => i.classList.remove('hover-correspondente'));
-    });
-  });
-</script>
-
+  </script>
+ 
 </body>
 </html>
+ 
