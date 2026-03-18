@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+<body>
+    <h1>0</h1>
+    <button id="contar">Contar</button>
+</body>
+ <script>
+        let contador = 0;
+        function contar(){
+         contador ++;
+
+         
+         //textContent é a propriedade que define o conteúdo de texto de um elemento HTML
+         document.querySelector("h1").innerHTML = contador;
+        }
+        document.getElementById("contar").onclick = contar;
+        // document.querySelector("#contar").addEventListener("click", contar);
+    </script>
+</html>
