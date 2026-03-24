@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+<body>
+    <h1>0</h1>
+    <button id="contar">+1</button>
+    <button id="contar">+1</button>
+    <button id="adicionar3">+3</button>
+    <button id="adicionar3">+3</button>
+    <button id="reiniciar">Reiniciar</button>
+</body>
+ <script>
+        let contador = 0;
+        function verificar(){
+             if(contador >= 12){
+                 document.querySelector("h1").innerHTML = "fim do jogo";
+    }
+}
+        function contar(){
+         contador ++;
+
+         
+         //textContent é a propriedade que define o conteúdo de texto de um elemento HTML
+         document.querySelector("h1").innerHTML = contador;
+            verificar();
+        }
+        function adicionar3(){
+         contador += 3;
+
+         
+         //textContent é a propriedade que define o conteúdo de texto de um elemento HTML
+         document.querySelector("h1").innerHTML = contador;
+                verificar();
+        }
+        function reiniciar(){
+            contador = 0;
+            document.querySelector("h1").innerHTML = contador;
+        }
+        
+        document.getElementById("contar").onclick = contar;
+        document.getElementById("adicionar3").onclick = adicionar3;
+        document.getElementById("reiniciar").onclick = reiniciar; 
+        // document.querySelector("#contar").addEventListener("click", contar);
+
+      
+    </script>
+</html>

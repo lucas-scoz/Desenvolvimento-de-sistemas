@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  
+</head>
+<body>
+    <h1 id="titulo">mudar texto</h1>
+    <p id="paragrafo">atividade feita em sala pappapapap</p>
+    <button onclick="mudar()">mudança</button>
+</body>
+  <script>
+    
+        let mudanca = document.querySelector("#titulo");
+        let mudanca2 = document.querySelector("#paragrafo");
+        function mudar(){
+            if(mudanca2.innerHTML === "atividade feita em sala pappapapap"){
+                mudanca2.innerHTML = "atividade funcionando pappapapap";
+            }else {
+                mudanca2.innerHTML = "atividade feita em sala pappapapap";
+            }
+            if(mudanca.innerHTML === "mudar texto"){
+                mudanca.innerHTML = "se aparecer deu certo!";
+            }else {
+                mudanca.innerHTML = "mudar texto";
+            }
+        };
+    </script>
+
+</html>
