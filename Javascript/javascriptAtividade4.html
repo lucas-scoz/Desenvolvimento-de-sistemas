@@ -1,52 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-   
+    <title>Marcador de Truco</title>
 </head>
 <body>
-    <h1>0</h1>
-    <button id="contar">+1</button>
-    <button id="contar">+1</button>
-    <button id="adicionar3">+3</button>
-    <button id="adicionar3">+3</button>
-    <button id="reiniciar">Reiniciar</button>
-</body>
- <script>
-        let contador = 0;
-        function verificar(){
-             if(contador >= 12){
-                 document.querySelector("h1").innerHTML = "fim do jogo";
+
+    <h2>Nós: <span id="nos">0</span></h2>
+    <button id="nos1">+1</button>
+    <button id="nos3">+3</button>
+
+    <h2>Eles: <span id="eles">0</span></h2>
+    <button id="eles1">+1</button>
+    <button id="eles3">+3</button>
+
+    <br><br>
+    <button id="reiniciar">Reiniciar Partida</button>
+
+<script>
+
+let pontosNos = 0;
+let pontosEles = 0;
+
+function verificar() {
+    if (pontosNos >= 12) {
+        alert("Nós vencemos!");
+    } 
+    else if (pontosEles >= 12) {
+        alert("Eles venceram!");
     }
 }
-        function contar(){
-         contador ++;
 
-         
-         //textContent é a propriedade que define o conteúdo de texto de um elemento HTML
-         document.querySelector("h1").innerHTML = contador;
-            verificar();
-        }
-        function adicionar3(){
-         contador += 3;
+function atualizarTela() {
+    document.getElementById("nos").textContent = pontosNos;
+    document.getElementById("eles").textContent = pontosEles;
+}
 
-         
-         //textContent é a propriedade que define o conteúdo de texto de um elemento HTML
-         document.querySelector("h1").innerHTML = contador;
-                verificar();
-        }
-        function reiniciar(){
-            contador = 0;
-            document.querySelector("h1").innerHTML = contador;
-        }
-        
-        document.getElementById("contar").onclick = contar;
-        document.getElementById("adicionar3").onclick = adicionar3;
-        document.getElementById("reiniciar").onclick = reiniciar; 
-        // document.querySelector("#contar").addEventListener("click", contar);
+document.getElementById("nos1").onclick = function() {
+    pontosNos++;
+    atualizarTela();
+    verificar();
+};
 
-      
-    </script>
+document.getElementById("nos3").onclick = function() {
+    pontosNos += 3;
+    atualizarTela();
+    verificar();
+};
+
+document.getElementById("eles1").onclick = function() {
+    pontosEles++;
+    atualizarTela();
+    verificar();
+};
+
+document.getElementById("eles3").onclick = function() {
+    pontosEles += 3;
+    atualizarTela();
+    verificar();
+};
+
+function reiniciar() {
+    pontosNos = 0;
+    pontosEles = 0;
+    atualizarTela();
+}
+
+document.getElementById("reiniciar").onclick = reiniciar;
+
+</script>
+
+</body>
 </html>

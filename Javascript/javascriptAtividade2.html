@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Alteração de Cor</title>
+
+    <style>
+        #box {
+            width: 200px;
+            height: 200px;
+            background-color: gray;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="box"></div>
+
+    <button data-color="red">Red</button>
+    <script>
+        let box = document.getElementById("box");
+
+        document.querySelectorAll("button").forEach((button) => {
+            button.onclick = () => {
+                box.style.backgroundColor = button.dataset.color;
+            }
+        });
+    </script>
+
+</body>
+</html>
