@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>redimensionar</title>
+</head>
+<body>
+    <img id="imagem" src="https://pbs.twimg.com/media/Cw-MFi7WEAAYpP3.jpg" alt="A imagem não pode ser carregada" width="150"> 
+    <form>
+    <button onclick="aumentar(event)">aumentar</button>
+    <button onclick="diminuir(event)">diminuir</button>
+    </form>
+    <script>
+     let tamanho = 150
+      function aumentar(event){
+         event.preventDefault()
+        tamanho += 50
+
+        document.getElementById("imagem").style.width = tamanho + "px"
+      }
+       function diminuir(event){
+         event.preventDefault()
+        tamanho -= 50
+
+        document.getElementById("imagem").style.width = tamanho + "px"
+       }
+    </script>
+</body>
+</html>

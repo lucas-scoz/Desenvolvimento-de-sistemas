@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body >
+       <input type="number" id="valor1" placeholder="coloque um numero aqui">
+         <input type="number" id="valor2" placeholder="coloque outro numero aqui aqui">
+         <h1 id="resultado">A soma é:</h1>
+           <button type="button" onclick="Soma()">somar os valores</button>
+
+           <script>
+            function Soma(){ 
+                  let resultado = document.querySelector("#resultado");
+                 
+                let valor1 = Number(document.getElementById("valor1").value)
+                let valor2 = Number(document.getElementById("valor2").value)
+
+                soma = valor1 + valor2 ;
+                resultado.innerHTML = "A soma é:" + soma
+
+            }
+           </script>
+</body>
+</html>
