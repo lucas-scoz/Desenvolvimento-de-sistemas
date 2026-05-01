@@ -15,7 +15,7 @@ app.get('/tarefas', async (req, res) => {
     }
 })
 
-app.get('/tarefas/:id'), async (req,res) =>{
+app.get('/tarefas/:id', async (req,res) =>{
     const id = parseInt(req.params.id)
 
 
@@ -24,7 +24,7 @@ app.get('/tarefas/:id'), async (req,res) =>{
     }
 
     try{
-        const [rows] = await db.query("Select * from tarelas where id = ?", [id]);
+        const [rows] = await db.query("Select * from tarefas where id = ?", [id]);
         if(rows.length == 0){
             return res.status(400).send("tarefa nao encontrada")
         }
@@ -35,18 +35,18 @@ app.get('/tarefas/:id'), async (req,res) =>{
         console.log(e)
          res.status(500).send("erro ao fazer busca")
     }
-}
+})
 app.post('/tarefas' , async (req,res) => {
-    let {titulo , concluido} = (req.params.id);
+    let {titulo , concluida} = req.body;
 
-    if (!titulo || concluido == null){
-    return res.status(400).send('titulo e concluido dever ser preenchidos');
+    if (!titulo || concluida == null){
+    return res.status(400).send('titulo e concluida dever ser preenchidos');
   }
 
   try{
- const[result] = await db.query ("insert into tarefas(titulo , concluido) values (? , ?)", [titulo , concluido] );
+ const[result] = await db.query ("insert into tarefas(titulo , concluida) values (? , ?)", [titulo , concluida] );
 
- const novoUsuario = {id:result.insertId , titulo , concluido}
+ const novoUsuario = {id:result.insertId , titulo , concluida}
 res.status(201).json(novoUsuario);
 
 
@@ -61,14 +61,14 @@ res.status(201).json(novoUsuario);
 
 app.put('/tarefas/:id', async (req , res) =>{
   const id = parseInt(req.params.id);
-  let{titulo , concluido } = req.body;
+  let{titulo , concluida } = req.body;
 
   if (isNaN(id)){
     return res.status(400).send("tarefa nao encontrada")
   }
 
-  if (!titulo || concluido == null){
-    return res.status(400).send('titulo e concluido dever ser preenchidos');
+  if (!titulo || concluida == null){
+    return res.status(400).send('titulo e concluida dever ser preenchidos');
   }
 
   try{
@@ -77,7 +77,7 @@ app.put('/tarefas/:id', async (req , res) =>{
         return res.status(404).send("tarefa nao encontrado")
       }
 
-      const [result] = await db.query("update tarefas set titulo = ? ,concluido = ? where id =? " , [titulo , concluido , id]);
+      const [result] = await db.query("update tarefas set titulo = ? ,concluida = ? where id =? " , [titulo , concluida , id]);
 
       if(result.affectedRows == 0){
         return res.status(400).send("nenhum dado foi alterado")
