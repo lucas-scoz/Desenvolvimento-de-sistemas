@@ -1,0 +1,9 @@
+main{
+    height: 100vh;
+}
+
+.centro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
