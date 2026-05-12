@@ -1,11 +1,6 @@
 main{
     height: 100vh;
 }
-li{
-    display: flex !important;
-    width: 30vw;
-    justify-content: space-between;
-}
 
 .centro{
     display: flex;

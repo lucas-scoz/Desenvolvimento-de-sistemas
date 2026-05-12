@@ -28,7 +28,7 @@ app.get('/usuario/:id', async (req, res) => {
       if(rows.length == 0){
         return res.status(404).send("usuario nao encontrado")
       }
-      res.json(rows)
+      res.json(rows[0])
   }catch(e){
     console.log(e)
     res.status(500).send("erro ao buscar tarefa!")

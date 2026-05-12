@@ -11,13 +11,13 @@ fetch('http://localhost:3001/usuario')
     const listaUsuario = document.getElementById("listaUsuarios")
     console.log(listaUsuario)
    
-
-    console.log(listaUsuario)
     data.forEach(element => {
         console.log(element)
-         listaUsuario.innerHTML += `<li class='list-group-item'>
-         Nome :${element.nome}  
-         Idade :${element.idade}</li>`
+         listaUsuario.innerHTML += 
+         `<li class='list-group-item'>
+         <h5> Nome: ${element.nome}  Idade: ${element.idade} </h5>
+         <a href="./editarUsuario/index.html?id=${element.id}" class="btn btn-primary">Atualizar</a>
+         </li>`
     });
 })
 
