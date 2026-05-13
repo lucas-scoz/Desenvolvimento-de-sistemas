@@ -9,28 +9,35 @@ fetch(`http://localhost:3001/usuario/${id}`)
 
     .then(response => response.json())
 
-    .then(data => 
-        console.log(data))
-
+    .then(data => {
+        nome.value = data.nome
+        idade.value = data.idade
+    })
     .catch(error => console.log(error));
 
 function atualizarUsuario(event){
  event.preventDefault() // Não recarregar a pagina ao submeter o formulario
 
- const nome  = document.getElementById("nomeUsuario").value
- const idade = document.getElementById("idadeUsuario").value
+// const nome  = document.getElementById("nomeUsuario").value
+// const idade = document.getElementById("idadeUsuario").value
  
-
  const usuario = {
+    "nome": nome.value,
+    "idade": parseInt(idade.value)
+ }
+/*
+
+  const usuario = {
     "nome" : nome , 
     "idade" : parseInt(idade)
  }
+   */ 
 console.log(usuario)
 
 
-fetch('http://localhost:3001/usuario', {
+fetch(`http://localhost:3001/usuario/${id}`, {
 
-    method: 'POST',
+    method: 'PUT',
 
     headers: {
 
@@ -42,10 +49,14 @@ fetch('http://localhost:3001/usuario', {
 
 })
 
-    .then(response => response.json())
+    .then(response =>{
+        if(response.ok){
+            return response
+        }
+         return response.json()})
 
     .then(data => {
-        alert("usuario foi cadastrado com sucesso!")
+        alert("usuario foi atualizado com sucesso!")
         window.location.href = "../index.html"
     })
 
