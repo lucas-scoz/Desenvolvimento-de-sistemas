@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Exercícios </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Lista de Exercícios</h1>
+
+    <!-- Exercício 1 -->
+    <section>
+        <h2>Exercício 1 - Exibindo informações</h2>
+        <input type="text" id="textoEx1" placeholder="Digite algo">
+        <button onclick="mostrarTexto()">Exibir</button>
+        <p id="resultadoEx1"></p>
+    </section>
+
+    <!-- Exercício 2 -->
+    <section>
+        <h2>Exercício 2 - Saudação personalizada</h2>
+        <input type="text" id="nomeEx2" placeholder="Digite seu nome">
+        <button onclick="saudar()">Saudar</button>
+        <p id="resultadoEx2"></p>
+    </section>
+
+    <!-- Exercício 3 -->
+    <section>
+        <h2>Exercício 3 - Contador de Cliques</h2>
+        <button onclick="contarClique()">Clique Aqui</button>
+        <p>Contador: <span id="contador">0</span></p>
+    </section>
+
+    <!-- Exercício 4 -->
+    <section>
+        <h2 id="tituloColorido">Exercício 4 - Alterando Cor</h2>
+        <button onclick="trocarCor('red')">Vermelho</button>
+        <button onclick="trocarCor('blue')">Azul</button>
+        <button onclick="trocarCor('green')">Verde</button>
+    </section>
+
+    <!-- Exercício 5 -->
+    <section>
+        <h2>Exercício 5 - Controle da Fonte</h2>
+        <p id="textoFonte">Este texto pode mudar de tamanho.</p>
+        <button onclick="aumentarFonte()">Aumentar</button>
+        <button onclick="diminuirFonte()">Diminuir</button>
+    </section>
+
+    <!-- Exercício 6 -->
+    <section>
+        <h2>Exercício 6 - Mostrar e Esconder</h2>
+
+        <div id="conteudoEx6">
+            Este conteúdo pode ser ocultado ou exibido.
+        </div>
+
+        <button onclick="alternarConteudo()">Mostrar/Esconder</button>
+    </section>
+
+    <!-- Exercício 7 -->
+    <section>
+        <h2>Exercício 7 - Troca de Imagem</h2>
+
+        <img
+            id="imagemEx7"
+            src="https://th.bing.com/th/id/R.b821c5e402898c28d4e5a6ace4dda131?rik=AqcPO6WKxmWTQw&pid=ImgRaw&r=0"
+            alt="Imagem"
+        >
+
+        <br><br>
+
+        <button onclick="trocarImagem()">Trocar Imagem</button>
+    </section>
+
+    <!-- Exercício 8 -->
+    <section>
+        <h2>Exercício 8 - Validação de E-mail</h2>
+
+        <input type="text" id="emailEx8" placeholder="Digite seu e-mail">
+
+        <button onclick="validarEmail()">Validar</button>
+
+        <p id="resultadoEmail"></p>
+    </section>
+
+    <!-- Exercício 9 -->
+    <section>
+        <h2>Exercício 9 - Lista Dinâmica</h2>
+
+        <input type="text" id="tarefaEx9" placeholder="Digite uma tarefa">
+
+        <button onclick="adicionarTarefa()">Adicionar</button>
+
+        <ul id="listaTarefas"></ul>
+    </section>
+
+    <!-- Exercício 10 -->
+    <section>
+        <h2>Exercício 10 - Cartão de Apresentação</h2>
+
+        <input type="text" id="nomeCartao" placeholder="Nome">
+        <input type="text" id="idadeCartao" placeholder="Idade">
+        <input type="text" id="profissaoCartao" placeholder="Profissão">
+
+        <button onclick="gerarCartao()">Gerar Cartão</button>
+
+        <div id="cartaoContainer"></div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
